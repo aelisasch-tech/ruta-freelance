@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruta Freelance - 5 Modelos de Negocio Reales</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: white;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px 50px;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .hero h1 {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        
+        .hero .subtitle {
+            font-size: 18px;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        
+        .product-image {
+            margin-top: -40px;
+            padding: 0 20px;
+            margin-bottom: 30px;
+        }
+        
+        .product-image img {
+            width: 100%;
+            max-width: 400px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .content {
+            padding: 30px 20px;
+        }
+        
+        .pain-point {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #856404;
+        }
+        
+        .solution {
+            margin-bottom: 35px;
+        }
+        
+        .solution h2 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .solution p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        
+        .what-inside {
+            background: #f8f9fa;
+            padding: 30px 20px;
+            margin-bottom: 30px;
+        }
+        
+        .what-inside h3 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .what-inside ul {
+            list-style: none;
+            margin-bottom: 0;
+        }
+        
+        .what-inside li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #444;
+        }
+        
+        .what-inside li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .story {
+            padding: 0 20px 30px;
+        }
+        
+        .story h3 {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .story p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        
+        .story .highlight {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            font-weight: 500;
+            color: #2e7d32;
+        }
+        
+        .price-section {
+            background: #2c3e50;
+            color: white;
+            padding: 35px 20px;
+            text-align: center;
+        }
+        
+        .price-section .price {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        
+        .price-section .price-detail {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-bottom: 25px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ffc107;
+            color: #000;
+            padding: 18px 50px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 193, 7, 0.6);
+        }
+        
+        .guarantee {
+            padding: 25px 20px;
+            text-align: center;
+            background: #f8f9fa;
+        }
+        
+        .guarantee-badge {
+            display: inline-block;
+            background: white;
+            border: 2px solid #28a745;
+            color: #28a745;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .guarantee p {
+            font-size: 14px;
+            color: #666;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .faq {
+            padding: 30px 20px;
+            background: white;
+        }
+        
+        .faq h3 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        
+        .faq-answer {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: #2c3e50;
+            color: white;
+            font-size: 13px;
+        }
+        
+        .footer .brand {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 26px;
+            }
+            
+            .price-section .price {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero -->
+        <div class="hero">
+            <div class="logo">FREE & WORKER</div>
+            <h1>¿Cansado de cursos que solo enseñan a vender cursos?</h1>
+            <p class="subtitle">5 modelos reales para generar ingresos como freelancer en 2026</p>
+        </div>
+        
+        <!-- Product Image -->
+        <div class="product-image">
+            <img src="https://i.ibb.co/nM4MYCck/Imagen-3.png" alt="Ruta Freelance - 5 Modelos de Negocio para Generar Ingresos Online">
+        </div>
+        
+        <!-- Content -->
+        <div class="content">
+            <!-- Pain Point -->
+            <div class="pain-point">
+                <strong>Si ya pagaste por "secretos millonarios" que nunca funcionaron, esto es diferente.</strong><br><br>
+                Nada de trading mágico. Nada de vender sueños. Solo 5 formas concretas de ofrecer servicios que las empresas YA están contratando.
+            </div>
+            
+            <!-- Solution -->
+            <div class="solution">
+                <h2>Lo que NO vas a encontrar aquí:</h2>
+                <p>❌ Promesas de hacerte millonario en 30 días</p>
+                <p>❌ Fórmulas secretas que nadie más conoce</p>
+                <p>❌ Mentorías caras para "desbloquear el siguiente nivel"</p>
+                
+                <h2 style="margin-top: 25px;">Lo que SÍ vas a encontrar:</h2>
+                <p>✅ 5 modelos de negocio freelance que funcionan hoy</p>
+                <p>✅ Habilidades concretas que puedes aprender en semanas</p>
+                <p>✅ Pasos para conseguir tus primeros clientes sin experiencia</p>
+            </div>
+        </div>
+        
+        <!-- What's Inside -->
+        <div class="what-inside">
+            <h3>Dentro del ebook descubrirás:</h3>
+            <ul>
+                <li>Cómo usar herramientas de IA para crear contenido que se vende (sin ser experto en tecnología)</li>
+                <li>El método exacto para conseguir clientes internacionales que pagan en dólares</li>
+                <li>Automatizaciones simples que te ahorran 10+ horas semanales</li>
+                <li>Estrategias para vender productos digitales mientras duermes</li>
+                <li>Configuración paso a paso de tus primeros servicios rentables</li>
+            </ul>
+        </div>
+        
+        <!-- Story -->
+        <div class="story">
+            <h3>Mi historia (sin filtros)</h3>
+            <p>Durante 2 años intenté emprender online. Gasté en cursos, mentorías y "fórmulas mágicas" que nunca me dieron resultados reales.</p>
+            <p>Hace 7 meses probé un enfoque diferente: ofrecer servicios freelance concretos usando las herramientas que las empresas necesitan HOY.</p>
+            <div class="highlight">
+                Hace 4 meses renuncié a mi trabajo gracias a los ingresos consistentes de estos 5 modelos. No soy millonario, pero sí soy libre.
+            </div>
+            <p style="margin-top: 15px;">Este ebook es el manual que yo necesitaba cuando empecé. Sin relleno. Sin promesas imposibles. Solo lo que funciona.</p>
+        </div>
+        
+        <!-- Price & CTA -->
+        <div class="price-section">
+            <div class="price">USD $5</div>
+            <p class="price-detail">Acceso inmediato • 33 páginas • 5 modelos paso a paso</p>
+            <a href="https://pay.hotmart.com/K104009367A" class="cta-button">QUIERO EMPEZAR AHORA</a>
+        </div>
+        
+        <!-- Guarantee -->
+        <div class="guarantee">
+            <div class="guarantee-badge">🛡️ GARANTÍA DE 7 DÍAS</div>
+            <p>Si en una semana sientes que no valió la pena, Hotmart te devuelve el 100% de tu dinero. Sin preguntas.</p>
+        </div>
+        
+        <!-- FAQ -->
+        <div class="faq">
+            <h3>Preguntas frecuentes</h3>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Necesito experiencia previa?</div>
+                <div class="faq-answer">No. El ebook está diseñado para que arranques desde cero absoluto. Si sabes usar redes sociales, puedes aplicar estos modelos.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Cómo recibo el ebook?</div>
+                <div class="faq-answer">Después del pago, Hotmart te da acceso inmediato a través de su plataforma. Sin descargas, todo online.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Esto realmente funciona o es otro curso más?</div>
+                <div class="faq-answer">No es un curso. Es un ebook de 33 páginas con modelos que YO uso para generar ingresos. Lo que comparto es lo que me permitió renunciar a mi trabajo hace 4 meses.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Necesito invertir dinero después de comprar el ebook?</div>
+                <div class="faq-answer">Puedes empezar con $0. Algunas herramientas tienen versiones gratuitas y la mayoría de servicios solo requieren tu tiempo y conexión a internet.</div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="brand">FREE & WORKER</div>
+            <div>Ruta Freelance © 2026</div>
+        </div>
+    </div>
+</body>
+</html>
